@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "IBM Plex Sans", sans-serif;
 }
@@ -36,4 +40,166 @@ h2 {
   font-size: 16px;
   line-height: 26px;
   color: var(--color-dark);
+}
+
+body {
+  background: url("./assets/bg-main-mobile.png") no-repeat 0% -25%;
+  background-color: var(--color-light);
+}
+
+header {
+  margin: 2.5rem 1.5rem;
+}
+
+.title-container {
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: -0.028rem;
+  color: var(--color-dark);
+}
+
+.title-container .subtitle {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.63rem;
+  letter-spacing: 0rem;
+  color: var(--color-dark);
+}
+
+.price-links-container {
+  margin-top: 8.875rem;
+  min-width: 23.44rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+
+  background: var(--color-dark) url("./assets/bg-pattern-2.svg") no-repeat top
+    center;
+}
+
+.phone {
+  margin-top: -6.13rem;
+  max-height: 430px;
+}
+
+.card {
+  min-width: 23.44rem;
+  padding: 3rem 2.25rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: var(--color-orange);
+}
+
+.card-title {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: bold;
+  color: var(--color-light);
+}
+
+.card-text {
+  margin: 0;
+  font-size: 1.13rem;
+  font-weight: normal;
+  line-height: 1.75rem;
+  color: var(--color-light);
+}
+
+.card-price {
+  margin: 1.5rem 0;
+  font-size: 4rem;
+  line-height: 3.25rem;
+  font-weight: bold;
+  color: var(--color-light);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-frequency {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: normal;
+}
+
+.card-button {
+  max-width: 100%;
+  padding: 0.875rem;
+  font-size: 1.13rem;
+  line-height: 2rem;
+  border-radius: 0.75rem;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-button-ios {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+.card-button-ios:hover {
+  background-color: var(--color-blue);
+  cursor: pointer;
+}
+
+.card-button-android {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.card-button-android:hover {
+  background-color: var(--color-yellow);
+  cursor: pointer;
+}
+
+footer {
+  margin: 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  margin: 4rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-left-text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.63rem;
+  font-weight: normal;
+  color: var(--color-dark);
+}
+
+.footer-text-bold {
+  font-weight: bold;
+}
+
+.footer-right {
+  margin-bottom: 5rem;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-links img:hover {
+  color: var(--color-orange);
 }

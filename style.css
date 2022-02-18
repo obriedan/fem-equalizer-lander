@@ -1,0 +1,39 @@
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+:root {
+  --color-blue: #66e2dc;
+  --color-orange: #fa7453;
+  --color-yellow: #ffb964;
+  --color-light: #fcfaf9;
+  --color-dark: #191826;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 5.5rem;
+  line-height: 5.5rem;
+  letter-spacing: -1px;
+  color: var(--color-dark);
+}
+h2 {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--color-dark);
+}
+
+.body-1 {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 34px;
+  color: var(--color-dark);
+}
+
+.body-2 {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--color-dark);
+}

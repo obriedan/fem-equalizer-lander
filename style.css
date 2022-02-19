@@ -12,6 +12,8 @@ body {
   --color-yellow: #ffb964;
   --color-light: #fcfaf9;
   --color-dark: #191826;
+
+  --media-mobile-width-min: 768px;
 }
 
 h1 {
@@ -53,11 +55,14 @@ header {
 
 .title-container {
   margin: 1.5rem;
+  max-width: 32.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
 
+@media (min-width: var(--media-mobile-width-min)) {
+}
 .title {
   margin: 0;
   font-size: 2.5rem;

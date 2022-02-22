@@ -53,12 +53,25 @@ body {
     background-image: url(./assets/bg-pattern-1.svg),
       url(./assets/bg-main-tablet.png);
     background-repeat: no-repeat, no-repeat;
-    background-position: top -32px right -36px, top -287px center;
-    background-size: auto 400px, auto;
+    background-position: top clamp(-40px, -1.5vw, -32px) right
+        clamp(-36px, calc(100vw - 1068px), 0px),
+      top -287px center;
+    background-size: auto clamp(400px, 38vw, 468px), auto;
     /* background-position: top -287px right -110px; */
   }
 }
 
+@media (min-width: 1440px) {
+  body {
+    background-image: url(./assets/bg-pattern-1.svg),
+      url(./assets/bg-main-desktop.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top clamp(-40px, -1.5vw, -32px) right
+        clamp(-36px, calc(100vw - 1068px), 0px),
+      top -287px center;
+    background-size: auto clamp(400px, 38vw, 468px), auto;
+  }
+}
 header {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -75,11 +88,24 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+  header {
+    max-width: clamp(45rem, 92vw, 72.375rem);
+    margin-bottom: clamp(4.45rem, 9.29%, 6.438125rem);
+  }
+}
+
 .title-section {
   margin: 0 auto;
   width: 100%;
   max-width: 45rem;
   padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .title-section {
+    max-width: clamp(45rem, 92vw, 72.375rem);
+  }
 }
 
 .title-container {
@@ -88,6 +114,11 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  .title-container {
+    max-width: clamp(32.5rem, 70vw, 53.5rem);
+  }
 }
 
 .title {
@@ -106,6 +137,14 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+  .title {
+    font-size: clamp(4rem, 7vw, 5.5rem);
+    line-height: clamp(4rem, 6.75vw, 5.5rem);
+    letter-spacing: clamp(-0.0625rem, -0.1vw, -0.0454545rem);
+  }
+}
+
 .title-container .subtitle {
   margin: 0;
   font-size: 1rem;
@@ -120,10 +159,16 @@ header {
     line-height: clamp(1.63rem, 9.75vw, 1.75rem);
   }
 }
+@media (min-width: 768px) {
+  .title-container .subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    line-height: clamp(1.75rem, 2.75vw, 2.125rem);
+  }
+}
 
 .price-links-container {
   margin: 0 auto;
-  margin-top: 8.875rem;
+  margin-top: clamp(10.375rem, 34vw, 15.5625rem);
   min-width: 23.44rem;
   max-width: 43.5rem;
   border-radius: 0.75rem;
@@ -141,7 +186,15 @@ header {
     background-image: url(./assets/bg-pattern-2.svg);
     background-repeat: no-repeat;
     background-size: clamp(280px, 25vw, 312px);
-    background-position: top right clamp(187px, 25vw, 462px);
+    background-position: top clamp(-40px, calc(900px - 100vw), 0px) right
+      clamp(187px, 35vw, 462px);
+  }
+}
+
+@media (min-width: 768px) {
+  .price-links-container {
+    max-width: clamp(43.5rem, 90vw, 69.375rem);
+    margin-top: clamp(15.5625rem, 34vw, 20.0625rem);
   }
 }
 
@@ -153,6 +206,7 @@ header {
 
 @media (min-width: 485px) {
   .phone {
+    margin-top: clamp(-8.625rem, -17vw, -6.13rem);
     margin-left: min(calc((100% - 55.725%) / 2), 4rem);
     margin-right: auto;
   }
@@ -160,8 +214,12 @@ header {
 
 @media (min-width: 768px) {
   .phone {
-    max-height: 34.75rem;
-    margin-left: 4rem;
+    width: auto;
+    max-width: 100%;
+    max-height: clamp(34.75rem, 72vw, 40.125rem);
+    margin-top: clamp(-13.3125rem, -15.5vw, -8.625rem);
+    margin-left: clamp(4rem, 8vw, 6.375rem);
+
     margin-right: auto;
   }
 }
@@ -184,32 +242,35 @@ header {
   .card {
     margin-right: min(calc((100% - 25rem) / 2), 3.625rem);
     margin-left: auto;
-    margin-top: clamp(-16rem, calc(16rem - 60vw), -3rem);
-    margin-bottom: clamp(-6rem, -10vw, 0rem);
+    margin-top: clamp(-16.5rem, calc(11.5rem - 59vw), -3rem);
+    margin-bottom: clamp(-7.5rem, -10vw, 0rem);
   }
 }
 
 @media (min-width: 768px) {
   .card {
-    margin-right: 3.625rem;
+    margin-right: clamp(3.625rem, 7.6vw, 5.9375rem);
+    margin-top: clamp(-21.1875rem, -33vw, -16.5rem);
     margin-left: auto;
     padding: 3rem;
+    max-width: clamp(25rem, 32vw, 27.875rem);
+    gap: clamp(0.75rem, 1vw, 1.375rem);
   }
 }
 
 .card-title {
   margin: 0;
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  line-height: clamp(2.5rem, 3vw, 3.255rem);
   font-weight: bold;
   color: var(--color-light);
 }
 
 .card-text {
   margin: 0;
-  font-size: 1.13rem;
+  font-size: clamp(1.13rem, 1.5vw, 1.25rem);
   font-weight: normal;
-  line-height: 1.75rem;
+  line-height: clamp(1.75rem, 3vw, 2.125rem);
   color: var(--color-light);
 }
 
@@ -279,10 +340,24 @@ footer {
   }
 }
 
+@media (min-width: 768px) {
+  footer {
+    max-width: clamp(45rem, 83%, 72.375rem);
+  }
+}
+
+@media (min-width: 1440px) {
+  footer {
+    flex-wrap: nowrap;
+    gap: 8.625rem;
+  }
+}
+
 .footer-text-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 4rem;
 }

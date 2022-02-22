@@ -132,6 +132,17 @@ header {
   align-items: center;
   background: var(--color-dark) url("./assets/bg-pattern-2.svg") no-repeat top
     center;
+  background-size: 280px;
+}
+
+@media (min-width: 650px) {
+  .price-links-container {
+    background-color: var(--color-dark);
+    background-image: url(./assets/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-size: clamp(280px, 25vw, 312px);
+    background-position: top right clamp(187px, 25vw, 462px);
+  }
 }
 
 .phone {
@@ -173,9 +184,8 @@ header {
   .card {
     margin-right: min(calc((100% - 25rem) / 2), 3.625rem);
     margin-left: auto;
-    margin-top: -16rem;
-    /* margin-top: -34.895833vw; */
-    margin-bottom: -6rem;
+    margin-top: clamp(-16rem, calc(16rem - 60vw), -3rem);
+    margin-bottom: clamp(-6rem, -10vw, 0rem);
   }
 }
 
@@ -255,20 +265,31 @@ header {
 }
 
 footer {
-  margin: 0 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.footer-left {
-  margin: 4rem 0;
+  max-width: 45rem;
+  margin: 4rem auto 5rem;
+  padding: 0 1.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
-.footer-left-text {
+@media (min-width: 425px) {
+  footer {
+    margin-top: clamp(4rem, 27vw, 11.4375rem);
+  }
+}
+
+.footer-text-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.footer-text {
   margin: 0;
+  max-width: 22.875rem;
   font-size: 1rem;
   line-height: 1.63rem;
   font-weight: normal;
@@ -279,8 +300,7 @@ footer {
   font-weight: bold;
 }
 
-.footer-right {
-  margin-bottom: 5rem;
+.footer-links-container {
   display: flex;
   gap: 1.25rem;
 }
